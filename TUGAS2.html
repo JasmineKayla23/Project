@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id" style="scroll-behavior:smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roti Rasa Bakery</title>
+</head>
+<body style="margin:0;padding:15px;font-family:Georgia,serif;background:#e4ded1;color:#24372e;box-sizing:border-box">
+
+<div style="max-width:1000px;margin:auto;display:grid;gap:5px;background:#1c2822;padding:5px;grid-template-columns:1fr 2fr 1fr;grid-template-areas:'menu menu cari' 'logo header header' 'recent isi isi' 'footer footer footer'">
+
+  <div style="grid-area:menu;background:#faf6ee;padding:20px">
+    <a href="#beranda" style="margin-right:15px;color:#24372e;font-weight:bold;text-decoration:none">Beranda</a>
+    <a href="#produk" style="margin-right:15px;color:#24372e;font-weight:bold;text-decoration:none">Produk</a>
+    <a href="#kontak" style="margin-right:15px;color:#24372e;font-weight:bold;text-decoration:none">Kontak</a>
+  </div>
+
+  <div style="grid-area:cari;background:#faf6ee;padding:20px">
+    <form>
+      <input type="text" placeholder="Cari roti..." style="width:60%;padding:5px">
+      <button type="submit" style="padding:5px 10px">Cari</button>
+    </form>
+  </div>
+
+  <div style="grid-area:logo;background:#e9d6a4;padding:20px;text-align:center">
+    <h1 style="margin:0">🥐</h1>
+    <h3 style="margin:5px 0 0">Roti Rasa Bakery</h3>
+  </div>
+
+  <div style="grid-area:header;background:#24372e;color:#fff;padding:20px">
+    <h1 style="margin:0 0 10px">Roti hangat setiap pagi</h1>
+    <p style="margin:0">Dipanggang dari bahan pilihan sejak jam 4 pagi.</p>
+  </div>
+
+  <div style="grid-area:recent;background:#faf6ee;padding:20px">
+    <h2 style="margin:0 0 10px">Recent Post</h2>
+    <ul style="margin:0;padding-left:18px">
+      <li style="margin-bottom:10px">Croissant edisi musim hujan</li>
+      <li style="margin-bottom:10px">Cara menyimpan roti tawar</li>
+      <li>Resep sourdough pemula</li>
+    </ul>
+  </div>
+
+  <div style="grid-area:isi;background:#faf6ee;padding:20px">
+
+    <section id="beranda" style="margin-bottom:25px">
+      <h2 style="margin:0 0 10px">Berita Terbaru</h2>
+      <p style="margin:0 0 10px">Kami menambah isian cokelat hazelnut pada croissant mentega. Tersedia terbatas setiap hari.</p>
+      <p style="margin:0">Pesanan kue ulang tahun kini bisa dilakukan lewat bagian kontak.</p>
+    </section>
+
+    <section id="produk" style="margin-bottom:25px">
+      <h2 style="margin:0 0 10px">Daftar Produk</h2>
+      <table style="width:100%;border-collapse:collapse">
+        <tr><th style="border:1px solid #24372e;padding:6px">Produk</th><th style="border:1px solid #24372e;padding:6px">Harga</th></tr>
+        <tr><td style="border:1px solid #24372e;padding:6px">Croissant Mentega</td><td style="border:1px solid #24372e;padding:6px">Rp 18.000</td></tr>
+        <tr><td style="border:1px solid #24372e;padding:6px">Roti Tawar Gandum</td><td style="border:1px solid #24372e;padding:6px">Rp 28.000</td></tr>
+        <tr><td style="border:1px solid #24372e;padding:6px">Donat Glaze</td><td style="border:1px solid #24372e;padding:6px">Rp 9.000</td></tr>
+        <tr><td style="border:1px solid #24372e;padding:6px">Kue Ulang Tahun</td><td style="border:1px solid #24372e;padding:6px">Rp 185.000</td></tr>
+      </table>
+    </section>
+
+    <section id="kontak">
+      <h2 style="margin:0 0 10px">Hubungi Kami</h2>
+      <p style="margin:0 0 10px">Jl. Margonda Raya No. 12<br>WhatsApp: 0812-3456-7890</p>
+      <form>
+        <p style="margin:0 0 10px">Nama:<br><input type="text"></p>
+        <p style="margin:0 0 10px">Pesan:<br><textarea rows="4" cols="30"></textarea></p>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+  </div>
+
+  <div style="grid-area:footer;background:#24372e;color:#fff;padding:20px;text-align:center">
+    <p style="margin:0">&copy; 2026 Roti Rasa Bakery</p>
+  </div>
+
+</div>
+</body>
+</html>

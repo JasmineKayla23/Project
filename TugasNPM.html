@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan Siswa Baru - SMA Negeri Contoh</title>
+
+    <!-- CSS EXTERNAL: file CSS dipanggil dengan tag <link> -->
+    <link rel="stylesheet" href="CSS/TugasNPM.css">
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <div class="topbar">
+        <div class="wadah">
+            <a class="merek" href="#atas">
+                <span class="logo">S</span>
+                SMA Negeri Contoh
+            </a>
+            <nav class="menu">
+                <a href="#syarat">Syarat</a>
+                <a href="#jadwal">Jadwal</a>
+                <a href="#daftar">Pendaftaran</a>
+                <a href="#pendaftar">Data Pendaftar</a>
+                <a href="#pengumuman">Pengumuman</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" id="atas">
+        <div class="wadah">
+            <div>
+                <h1>Mulai cerita SMA kamu di sini</h1>
+                <p>Penerimaan siswa baru Tahun Ajaran 2026/2027 sudah dibuka. Isi formulir, pantau jadwal, dan lihat hasil seleksi dalam satu halaman.</p>
+                <a class="tombol tombol-utama" href="#daftar">Daftar sekarang</a>
+                <a class="tombol tombol-garis" href="#jadwal">Lihat jadwal</a>
+            </div>
+
+            <div class="tiket">
+                <h3>Kartu Pendaftaran</h3>
+                <div>Gelombang 1</div>
+                <hr class="garis">
+                <dl>
+                    <dt>Pendaftaran online</dt>
+                    <dd>1 - 15 Juni 2026</dd>
+                    <dt>Tes seleksi</dt>
+                    <dd>20 Juni 2026</dd>
+                    <dt>Pengumuman hasil</dt>
+                    <dd>25 Juni 2026</dd>
+                </dl>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wadah">
+
+            <!-- SYARAT -->
+            <section class="blok" id="syarat">
+                <h2>Syarat Pendaftaran</h2>
+                <p class="pengantar">Siapkan berkas berikut sebelum mengisi formulir.</p>
+                <ul class="syarat">
+                    <li>Lulusan SMP/MTs sederajat</li>
+                    <li>Usia maksimal 21 tahun pada 1 Juli 2026</li>
+                    <li>Fotokopi ijazah atau surat keterangan lulus</li>
+                    <li>Fotokopi Kartu Keluarga dan Akta Kelahiran</li>
+                    <li>Pas foto berwarna 3x4 sebanyak 2 lembar</li>
+                    <li>Memiliki NISN yang valid</li>
+                </ul>
+            </section>
+
+            <!-- JADWAL -->
+            <section class="blok" id="jadwal">
+                <h2>Jadwal Penerimaan</h2>
+                <p class="pengantar">Tahapan berjalan berurutan, pastikan tidak ada yang terlewat.</p>
+                <ol class="alur">
+                    <li>
+                        <span class="nomor">1</span>
+                        <strong>Pendaftaran online</strong>
+                        <span>1 - 15 Juni 2026</span>
+                    </li>
+                    <li>
+                        <span class="nomor">2</span>
+                        <strong>Verifikasi berkas</strong>
+                        <span>16 - 18 Juni 2026</span>
+                    </li>
+                    <li>
+                        <span class="nomor">3</span>
+                        <strong>Tes seleksi</strong>
+                        <span>20 Juni 2026</span>
+                    </li>
+                    <li>
+                        <span class="nomor">4</span>
+                        <strong>Pengumuman hasil</strong>
+                        <span>25 Juni 2026</span>
+                    </li>
+                    <li>
+                        <span class="nomor">5</span>
+                        <strong>Daftar ulang</strong>
+                        <span>26 - 30 Juni 2026</span>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- FORMULIR -->
+            <section class="blok" id="daftar">
+                <h2>Formulir Pendaftaran</h2>
+                <p class="pengantar">Isi data sesuai dokumen resmi.</p>
+
+                <form>
+                    <fieldset>
+                        <legend>Data Calon Siswa</legend>
+                        <div class="kisi">
+                            <div class="penuh">
+                                <label for="nama">Nama lengkap</label>
+                                <input type="text" id="nama" name="nama" placeholder="Sesuai ijazah">
+                            </div>
+
+                            <div>
+                                <label for="nisn">NISN</label>
+                                <input type="text" id="nisn" name="nisn" placeholder="10 digit NISN">
+                            </div>
+
+                            <div>
+                                <label for="telepon">No. telepon / WhatsApp</label>
+                                <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
+                            </div>
+
+                            <div>
+                                <label for="tempat">Tempat lahir</label>
+                                <input type="text" id="tempat" name="tempat">
+                            </div>
+
+                            <div>
+                                <label for="tanggal">Tanggal lahir</label>
+                                <input type="date" id="tanggal" name="tanggal">
+                            </div>
+
+                            <div class="penuh">
+                                <label>Jenis kelamin</label>
+                                <div class="radio-baris">
+                                    <input type="radio" id="lk" name="jk" value="L">
+                                    <label for="lk">Laki-laki</label>
+                                    <input type="radio" id="pr" name="jk" value="P">
+                                    <label for="pr">Perempuan</label>
+                                </div>
+                            </div>
+
+                            <div class="penuh">
+                                <label for="alamat">Alamat</label>
+                                <textarea id="alamat" name="alamat" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Data Sekolah Asal</legend>
+                        <div class="kisi">
+                            <div>
+                                <label for="asal">Nama sekolah asal</label>
+                                <input type="text" id="asal" name="asal">
+                            </div>
+
+                            <div>
+                                <label for="nilai">Rata-rata nilai rapor</label>
+                                <input type="number" id="nilai" name="nilai" min="0" max="100" step="0.01">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Data Orang Tua / Wali</legend>
+                        <div class="kisi">
+                            <div>
+                                <label for="ayah">Nama ayah</label>
+                                <input type="text" id="ayah" name="ayah">
+                            </div>
+
+                            <div>
+                                <label for="ibu">Nama ibu</label>
+                                <input type="text" id="ibu" name="ibu">
+                            </div>
+
+                            <div class="penuh">
+                                <label for="pekerjaan">Pekerjaan orang tua</label>
+                                <select id="pekerjaan" name="pekerjaan">
+                                    <option value="">-- Pilih Pekerjaan --</option>
+                                    <option>PNS</option>
+                                    <option>TNI / Polri</option>
+                                    <option>Karyawan Swasta</option>
+                                    <option>Wiraswasta</option>
+                                    <option>Petani</option>
+                                    <option>Nelayan</option>
+                                    <option>Buruh</option>
+                                    <option>Guru / Dosen</option>
+                                    <option>Pedagang</option>
+                                    <option>Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Pilihan Jurusan</legend>
+                        <div class="kisi">
+                            <div>
+                                <label for="jurusan">Jurusan</label>
+                                <select id="jurusan" name="jurusan">
+                                    <option>IPA</option>
+                                    <option>IPS</option>
+                                    <option>Bahasa</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="jalur">Jalur pendaftaran</label>
+                                <select id="jalur" name="jalur">
+                                    <option>Zonasi</option>
+                                    <option>Prestasi</option>
+                                    <option>Afirmasi</option>
+                                    <option>Perpindahan Orang Tua</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button class="tombol tombol-form" type="submit">Kirim pendaftaran</button>
+                    <button class="tombol tombol-reset" type="reset">Kosongkan form</button>
+                </form>
+            </section>
+
+            <!-- DATA PENDAFTAR -->
+            <section class="blok" id="pendaftar">
+                <h2>Data Pendaftar</h2>
+                <p class="pengantar">Daftar calon siswa yang sudah mengirim formulir.</p>
+                <div class="tabel-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. Daftar</th>
+                                <th>Nama</th>
+                                <th>Sekolah Asal</th>
+                                <th>Jurusan</th>
+                                <th>Jalur</th>
+                                <th>Nilai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PSB-001</td>
+                                <td>Rina Maharani</td>
+                                <td>SMP Negeri 1</td>
+                                <td>IPA</td>
+                                <td>Prestasi</td>
+                                <td>88,50</td>
+                            </tr>
+                            <tr>
+                                <td>PSB-002</td>
+                                <td>Dimas Prasetyo</td>
+                                <td>SMP Negeri 3</td>
+                                <td>IPS</td>
+                                <td>Zonasi</td>
+                                <td>82,25</td>
+                            </tr>
+                            <tr>
+                                <td>PSB-003</td>
+                                <td>Nadia Putri</td>
+                                <td>MTs Al-Hidayah</td>
+                                <td>Bahasa</td>
+                                <td>Afirmasi</td>
+                                <td>79,80</td>
+                            </tr>
+                            <tr>
+                                <td>PSB-004</td>
+                                <td>Fajar Nugroho</td>
+                                <td>SMP Swasta Bina Bangsa</td>
+                                <td>IPA</td>
+                                <td>Zonasi</td>
+                                <td>85,10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- PENGUMUMAN -->
+            <section class="blok" id="pengumuman">
+                <h2>Pengumuman Hasil Seleksi</h2>
+                <p class="pengantar">Hasil seleksi gelombang 1.</p>
+                <div class="tabel-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. Daftar</th>
+                                <th>Nama</th>
+                                <th>Jurusan</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PSB-001</td>
+                                <td>Rina Maharani</td>
+                                <td>IPA</td>
+                                <td><span class="lencana diterima">Diterima</span></td>
+                            </tr>
+                            <tr>
+                                <td>PSB-002</td>
+                                <td>Dimas Prasetyo</td>
+                                <td>IPS</td>
+                                <td><span class="lencana diterima">Diterima</span></td>
+                            </tr>
+                            <tr>
+                                <td>PSB-003</td>
+                                <td>Nadia Putri</td>
+                                <td>Bahasa</td>
+                                <td><span class="lencana cadangan">Cadangan</span></td>
+                            </tr>
+                            <tr>
+                                <td>PSB-004</td>
+                                <td>Fajar Nugroho</td>
+                                <td>IPA</td>
+                                <td><span class="lencana ditolak">Tidak diterima</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="wadah">
+            <p><strong>SMA Negeri Contoh</strong><br>Panitia Penerimaan Siswa Baru Tahun Ajaran 2026/2027</p>
+            <p>&copy; 2026 Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

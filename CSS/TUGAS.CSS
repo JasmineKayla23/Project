@@ -1,0 +1,100 @@
+root{--bg:#e4ded1;
+  --coklat:#24372e; --mentega:#e9d6a4; --pistachio:#a9c49a;
+  --stroberi:#85652a; --tepung:#faf6ee; --garis:#1c2822;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:"Nunito",Verdana,sans-serif;color:var(--coklat);line-height:1.65;padding:16px}
+h1,h2,h3,.brand{font-family:"Fraunces",Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--stroberi);outline-offset:2px}
+
+/* ===== LAYOUT UTAMA (sesuai sketsa) ===== */
+.wrapper{
+  max-width:1100px;margin:0 auto;display:grid;gap:6px;background:var(--garis);padding:6px;
+  grid-template-columns:27fr 45fr 28fr;
+  grid-template-areas:
+    "menu   menu   cari"
+    "logo   header header"
+    "recent isi    isi"
+    "footer footer footer";
+}
+.box{background:var(--tepung);padding:20px;outline:1px solid #b8975a;outline-offset:-9px;min-width:0}
+.menu{grid-area:menu;display:flex;align-items:center}
+.cari{grid-area:cari;display:flex;align-items:center}
+.logo{grid-area:logo;background:#efe4c8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+.header{grid-area:header;background:var(--coklat);color:var(--tepung);display:flex;flex-direction:column;justify-content:center}
+.recent{grid-area:recent}
+.isi{grid-area:isi}
+.footer{grid-area:footer;background:var(--coklat);color:var(--tepung);text-align:center}
+
+/* menu */
+.menu ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.menu a{display:block;padding:6px 16px;border-radius:999px;text-decoration:none;font-weight:800}
+.menu a:hover,.menu a.aktif{background:var(--coklat);color:var(--mentega)}
+
+/* pencarian */
+.cari form{display:flex;width:100%;gap:6px}
+.cari input{flex:1;min-width:0;padding:7px 10px;border:2px solid var(--garis);border-radius:6px;font:inherit;background:var(--tepung)}
+.cari button{padding:7px 12px;border:2px solid var(--garis);border-radius:6px;background:var(--mentega);font:inherit;font-weight:800;cursor:pointer;color:var(--coklat)}
+
+/* logo */
+.badge{width:96px;height:96px;border-radius:50%;background:var(--mentega);border:4px solid var(--coklat);display:grid;place-items:center;font-size:46px}
+.brand{font-size:1.5rem;font-weight:800;line-height:1.1}
+.logo small{font-size:.85rem}
+
+/* header */
+.header h1{color:var(--mentega);font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:6px}
+.header p{max-width:54ch}
+
+/* recent post */
+.recent h2,.isi h2{font-size:1.25rem;margin-bottom:10px}
+.recent ul{list-style:none}
+.recent li{padding:10px 0;border-bottom:2px dotted var(--coklat)}
+.recent li:last-child{border-bottom:0}
+.recent a{font-weight:800;text-decoration:none}
+.recent a:hover{color:var(--stroberi);text-decoration:underline}
+.recent time{display:block;font-size:.85rem;opacity:.75}
+
+/* isi */
+.isi article{margin-bottom:22px;padding-bottom:18px;border-bottom:2px dotted var(--coklat)}
+.isi article:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.isi h3{font-size:1.4rem;margin-bottom:2px}
+.isi .tgl{font-size:.9rem;opacity:.75;margin-bottom:8px}
+.isi p{margin-bottom:10px;max-width:68ch}
+.tombol{display:inline-block;padding:8px 18px;background:var(--stroberi);color:#fff;border-radius:999px;font-weight:800;text-decoration:none}
+.tombol:hover{background:var(--coklat)}
+
+/* produk */
+.grid-produk{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.produk{border:3px solid var(--garis);border-radius:6px;overflow:hidden;background:#fff}
+.produk .foto{height:110px;display:grid;place-items:center;font-size:54px;background:#efe6d2}
+.produk div.teks{padding:10px 12px}
+.produk h3{font-size:1.1rem}
+.harga{font-weight:800;color:var(--stroberi)}
+
+/* kontak */
+.kontak-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+form.kontak label{display:block;font-weight:800;margin-top:10px}
+form.kontak input,form.kontak textarea{width:100%;padding:8px 10px;border:2px solid var(--garis);border-radius:6px;font:inherit;background:#fff}
+form.kontak button{margin-top:12px;border:0;cursor:pointer;font:inherit}
+table{border-collapse:collapse;width:100%}
+td,th{border:2px solid var(--garis);padding:6px 10px;text-align:left}
+th{background:var(--mentega)}
+
+/* ===== RESPONSIF ===== */
+@media (max-width:860px){
+  .wrapper{grid-template-columns:1fr;
+    grid-template-areas:"menu" "cari" "logo" "header" "isi" "recent" "footer"}
+  .kontak-grid{grid-template-columns:1fr}
+}
+
+/* ===== HALAMAN VIA :target (tanpa JavaScript) ===== */
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:light dark}
+.page{display:none}
+.page:target{display:contents}
+body:not(:has(.page:target)) #beranda{display:contents}
+body:has(#produk:target) .menu a[href="#produk"],
+body:has(#kontak:target) .menu a[href="#kontak"],
+body:not(:has(.page:target)) .menu a[href="#beranda"]{background:var(--coklat);color:var(--mentega)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121815}}

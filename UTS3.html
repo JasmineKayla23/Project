@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Donasi Online</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    .banner { background: gold; font-weight: bold; font-size: 13px; padding: 8px; max-width: 640px; margin: 0 auto 20px; }
+    form { display: inline-block; text-align: left; }
+    .baris { display: flex; align-items: center; margin-bottom: 14px; }
+    label { width: 170px; font-weight: bold; font-size: 13px; }
+    input, select { width: 250px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    .tombol { text-align: center; }
+    button { background: gold; border: none; padding: 8px 16px; font-size: 12px; cursor: pointer; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <img src="kol.jpeg" alt="Logo Donasi" width="60" height="60">
+  <h3>Formulir Donasi Online</h3>
+  <div class="banner">Terima kasih telah berdonasi! Setiap kontribusi Anda sangat berarti.</div>
+
+  <form action="#" method="post">
+    <div class="baris">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+    </div>
+    <div class="baris">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="baris">
+      <label for="telepon">Nomor Telepon:</label>
+      <input type="tel" id="telepon" name="telepon" required>
+    </div>
+    <div class="baris">
+      <label for="jumlah">Jumlah Donasi:</label>
+      <input type="number" id="jumlah" name="jumlah" min="1000" required>
+    </div>
+    <div class="baris">
+      <label for="metode">Metode Pembayaran:</label>
+      <select id="metode" name="metode">
+        <option>Transfer Bank</option>
+        <option>E-Wallet</option>
+        <option>Kartu Kredit</option>
+      </select>
+    </div>
+    <div class="tombol">
+      <button type="submit">Donasi Sekarang</button>
+    </div>
+  </form>
+</body>
+</html>

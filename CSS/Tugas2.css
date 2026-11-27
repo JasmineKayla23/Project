@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  background: #fff8e1;
+}
+
+header {
+  background: #425B9A;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+nav {
+  background: #76C0EC;
+  text-align: center;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+section {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.biru   { background: #e3f2fd; border: 2px solid #42a5f5; }
+.hijau  { background: #e8f5e9; border: 2px solid #66bb6a; }
+.kuning { background: #fff9c4; border: 2px solid #fdd835; }
+.pink   { background: #fce4ec; border: 2px solid #ec407a; }
+
+article {
+  background: white;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  border-left: 8px solid;
+  border-radius: 6px;
+}
+
+.kartu-merah  { border-color: #e53935; }
+.kartu-oranye { border-color: #fb8c00; }
+.kartu-ungu   { border-color: #8e24aa; }
+
+img, iframe {
+  max-width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+audio {
+  width: 100%;
+}
+
+footer {
+  background: #76C0EC;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
